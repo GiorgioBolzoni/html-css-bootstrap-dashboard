@@ -6,6 +6,10 @@
 }
 body{
     font-family: sans-serif; /*cambiare Roboto*/
+    background-color: var(--color-bg-body);
+}
+.my-bg-light-blue{
+    background-color: var(--color-nav-bar);
 }
 .wrapper{
     width: 100%;
@@ -15,6 +19,7 @@ body{
 header{
     width: 100%;
     height: 70px;
+    background-color: var(--color-bg-search-bar);
 }
 main{
     width: 100%;
@@ -30,4 +35,11 @@ main{
 #main-content{
     width: calc(100% - 150px);
     overflow-y: auto;
+}
+#sidebar > div{
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color: white;
 }

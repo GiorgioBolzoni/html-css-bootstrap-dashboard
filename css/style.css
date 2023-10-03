@@ -1,0 +1,33 @@
+:root {
+	--color-bg-search-bar: #e5e5e5;
+	--color-bg-body: #f8f9fa;
+	--color-side-bar: #0f263d;
+	--color-nav-bar: #1b72e8;
+}
+body{
+    font-family: sans-serif; /*cambiare Roboto*/
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color:#f8f9fa;
+}
+header{
+    width: 100%;
+    height: 70px;
+}
+main{
+    width: 100%;
+    height: calc(100% - 70px);
+    display: flex;
+}
+#sidebar{
+    width: 150px;
+    height: 100%;
+    background-color: #0f263d;
+    background-image: url(../img/sidebar-bg.png);
+}
+#main-content{
+    width: calc(100% - 150px);
+    overflow-y: auto;
+}

@@ -5,7 +5,7 @@
 	--color-nav-bar: #1b72e8;
 }
 body{
-    font-family: sans-serif; /*cambiare Roboto*/
+    font-family: 'Roboto', sans-serif;
     background-color: var(--color-bg-body);
 }
 .my-bg-light-blue{
@@ -67,13 +67,27 @@ a{
     width: 20px;
     background-color: white;
     overflow: hidden;
-
+    position: relative;
+    border: 1px solid black;
+}
+.mini-container-img{
+    width: 10px;
 }
 img{
     width: 100%;
     display: block;
 }
-
+tr{
+    border: 2px solid red;
+}
+td{
+    border: 1px solid blue;
+    padding: 0;
+    margin: 0;
+}
+td>div{
+    border: 2px solid red;
+}
 .btn-green{
     background-color: green;
     border: 2px inset transparent;
@@ -81,6 +95,10 @@ img{
 }
 .btn-green:hover{
     background-color: rgb(1, 81, 1);
+    border: 2px inset rgb(0, 255, 0);
+}
+.btn-green:hover:active{
+    background-color: rgba(1, 81, 1, 0.548);
     border: 2px inset rgb(0, 255, 0);
 }
 table{

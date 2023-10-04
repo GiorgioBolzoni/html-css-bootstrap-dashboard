@@ -11,13 +11,34 @@
 <body>
     <div class="wrapper">
         <header class="d-flex justify-content-center align-items-center">
-            <div class="container-fluid row bg-light">
-                <div class="col-2 border">1</div>
-                <div class="col-8 border">2</div>
+            <nav class="container-fluid row bg-light">
                 <div class="col-2 border">
-                    <ul></ul>
+                    <div class="card-img logo-card">
+                        <img src="img/logo.svg" alt="logo" id="logo-lg" class="d-none d-lg-block">
+                        <img src="img/mobile-logo.png" alt="logo-s" class="d-lg-none">
+                    </div>
                 </div>
-            </div>
+                <div class="col-8 border d-flex align-items-center">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="search" class="w-100" placeholder="Prova a cercare: Lezioni di Laravel">
+                </div>
+                <div class="col-2 border d-flex align-content-center">
+                    <ul class="d-flex list ul-nav">
+                        <li>
+                            <button><i class="fa-solid fa-list"></i></button>
+                        </li>
+                        <li>
+                            <button><i class="fa-solid fa-list"></i></button>
+                        </li>
+                        <li>
+
+                        </li>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
 
         <main>
@@ -74,18 +95,73 @@
                 </div>
             </div>
             <div id="main-content">
-                <div class="container-fluid bg-primary">
-                    <div class="d-flex flex-lg-row-reverse">
-                        <div class="col-lg-4 col-12 border">1</div>
-                        <div class="col-lg-4 col-12 border">2</div>
-                        <div class="col-lg-4 col-12 border">3</div>
+                <div class="container-fluid bg-primary py-2">
+                    <div class="d-flex flex-column flex-lg-row-reverse text-light row gy-3">
+                        <div class="col-lg-4 col-12 d-flex align-items-center">
+                            <div class="font-07">Nuovo Studente</div>
+                            <div class="btn btn-blue d-flex justify-content-center align-items-center ms-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                +
+                            </div>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                <div class="offcanvas-header">
+                                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci nuovo studente</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                  <div class="row">
+                                    <di class="col-6">
+                                        <div class="input-group d-flex flex-column mb-3">
+                                            <div>Nome</div>
+                                            <input type="text" class="form-control w-100 rounded-3" aria-label="Username" aria-describedby="basic-addon1">
+                                          </div>
+                                    </di>
+                                    <di class="col-6">
+                                        <div class="input-group d-flex flex-column mb-3">
+                                            <div>Cognome</div>
+                                            <input type="text" class="form-control w-100 rounded-3" aria-label="Username" aria-describedby="basic-addon1">
+                                          </div>
+                                    </di>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-lg-4 col-12 order-lg-1">
+                            <div class="d-flex align-items-center">
+                                <h2>Boolean</h2>
+                                <button type="button" class="btn btn-dark-blue ms-2 py-1 px-1 rounded-5">
+                                    Piano blaze
+                                </button>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-dark-blue ms-2 py-1 px-1 rounded-5">
+                                    3app
+                                </button type="button">
+                                <i class="fa-solid fa-angles-right"></i>
+                                <button type="button" class="btn btn-dark-blue ms-1 py-1 px-1 rounded-5 d-lg-none">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button type="button">
+                                <button type="button" class="btn btn-dark-blue ms-2 py-1 px-1 rounded-5 d-none d-lg-block">
+                                    Boolean mobile app
+                                </button type="button">
+                                <button type="button" class="btn btn-dark-blue ms-2 py-1 px-1 rounded-5 d-none d-lg-block">
+                                    Boolean web app
+                                </button type="button">
+                                <button type="button" class="btn btn-dark-blue ms-2 py-1 px-1 rounded-5 d-none d-lg-block">
+                                    Boolean blog app
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="font-07">Studenti negli ultimi 30 minuti</div>
+                            <div>125</div>
+                        </div>
                     </div>
                 </div>
                 <div class="container-fluid">
                     <section id="dashboard" class="row">
-                        <div class="col-12 col-lg-8 border">
-                            <div class="row border gy-5 py-3">
-                                <div class="col-12 border">
+                        <div class="col-12 col-lg-8 ">
+                            <div class="row  gy-5 py-3">
+                                <div class="col-12 ">
                                     <div class="card">
                                         <div class="card-header">
                                             <h3>Prossime classi</h3>
@@ -117,10 +193,10 @@
                                                         <div class="btn btn-green my-1 py-1 px-2 text-white">Done</div>
                                                     </td>
                                                     <td>
-                                                        <div class="btn btn-azioni my-2 py-1 px-2 border">
+                                                        <div class="btn btn-azioni my-2 py-1 px-2 ">
                                                             <i class="fa-solid fa-pencil"></i>
                                                         </div>
-                                                        <div class="btn btn-azioni my-2 py-1 px-2 border">
+                                                        <div class="btn btn-azioni my-2 py-1 px-2">
                                                             <i class="fa-solid fa-x"></i>
                                                         </div>
                                                     </td>
@@ -141,42 +217,10 @@
                                                   </tr>
                                                 </tbody>
                                               </table>
-                                            <!-- <div class="row border-bottom d-flex align-items-center">
-                                                <div class="col-5 col-sm-3 col-lg-6">
-                                                    Nome
-                                                </div>
-                                                <div class="col-sm-3 col-lg-2 d-flex align-items-center justify-content-center d-none d-sm-block">Data inizio</div>
-                                                <div class="col-sm-2 col-lg-1 d-flex align-items-center justify-content-center d-none d-sm-block">ROI</div>
-                                                <div class="col-3 col-sm-2 col-lg-1 d-flex align-items-center justify-content-center">Stato</div>
-                                                <div class="col-4 col-sm-2 col-lg-2 d-flex align-items-center justify-content-center">Azioni</div>
-                                            </div>
-                                            <div class="row border-bottom d-flex align-items-center">
-                                                <div class="col-5 col-sm-3 col-lg-6 d-flex align-items-center">
-                                                    <div class="class-avatar-container me-3">
-                                                        <img src="img/class-avatar.jpg" alt="">
-                                                    </div>
-                                                    <div>
-                                                        Classe 75
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-lg-2 d-flex align-items-center justify-content-center d-none d-sm-block">15 Febbraio 2021</div>
-                                                <div class="col-sm-2 col-lg-1 d-flex align-items-center justify-content-center d-none d-sm-block">20%</div>
-                                                <div class="col-sm-2 col-md-2 col-lg-1 d-flex align-items-center justify-content-center">
-                                                    <div class="btn btn-green my-2 py-1 px-2 text-white">Done</div>
-                                                </div>
-                                                <div class="col-4 col-sm-2 col-lg-2 d-flex align-items-center justify-content-around">
-                                                    <div class="btn btn-azioni my-2 py-1 px-2 border">
-                                                        <i class="fa-solid fa-pencil"></i>
-                                                    </div>
-                                                    <div class="btn btn-azioni my-2 py-1 px-2 border">
-                                                        <i class="fa-solid fa-x"></i>
-                                                    </div>
-                                                </div>
-                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 border">
+                                <div class="col-12 ">
                                     <div class="card">
                                         <div class="card-header">
                                             <h3>F.A.Q.</h3>
@@ -219,9 +263,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4 border">
-                            <div class="row border gy-5 py-3">
-                                <div class="col-12 border">
+                        <div class="col-12 col-lg-4 ">
+                            <div class="row  gy-5 py-3">
+                                <div class="col-12 ">
                                     <div class="card">
                                         <div class="card-header">
                                             <h3>Todo</h3>
@@ -259,20 +303,12 @@
                                                     </div>
                                                 </li>
                                               </ul>
-                                            <!-- <div class="input-group mb-3 bg-body-tertiary border rounded-1">
-                                                <div class="input-group-text border-0">
-                                                  <input class="form-check-input mt-0" type="checkbox" value="check" aria-label="Checkbox for following text input">
-                                                </div>
-                                                <div>
-                                                    Kickoff nuove classi
-                                                </div>
-                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row border gy-5 py-3">
-                                <div class="col-12 border">
+                            <div class="row gy-5 py-3">
+                                <div class="col-12">
                                     <div class="card">
                                         
                                         <div class="card-body">

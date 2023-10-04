@@ -32,6 +32,9 @@ li>button{
     border: none;
     background-color: transparent;
 }
+.btn-stato{
+
+}
 main{
     width: 100%;
     height: calc(100% - 70px);
@@ -88,6 +91,7 @@ table{
     width: 30px;
     height: 30px;
     color: white;
+    background-color: var(--color-nav-bar);
 }
 .btn-blue:hover{
     border-color: var(--color-bg-body);
@@ -114,6 +118,25 @@ table{
 .btn-dark-blue:hover:active{
     border: 0 #114792a6;
     background-color:  #114792a6;
+}
+.btn-yellow{
+    border-color: var(--color-bg-body);
+    width: 30px;
+    height: 30px;
+    color: black;
+    background-color: rgba(206, 206, 0, 0.768);
+}
+.btn-yellow:hover{
+    border-color: var(--color-bg-body);
+    width: 30px;
+    height: 30px;
+    background-color: rgb(206, 206, 0);
+}
+.btn-yellow:hover:active{
+    border-color: var(--color-bg-body);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(206, 206, 0, 0.648);
 }
 .font-07{
     font-size: 0.7em;

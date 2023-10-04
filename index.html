@@ -12,9 +12,11 @@
     <div class="wrapper">
         <header class="d-flex justify-content-center align-items-center">
             <div class="container-fluid row bg-light">
-                <div class="col-1 border">1</div>
-                <div class="col-10 border">2</div>
-                <div class="col-1 border">3</div>
+                <div class="col-2 border">1</div>
+                <div class="col-8 border">2</div>
+                <div class="col-2 border">
+                    <ul></ul>
+                </div>
             </div>
         </header>
 
@@ -24,12 +26,12 @@
                     <div class="row px-3">
                         <div class="col-12">
                             <div class="row gy-3 d-flex flex-column flex-md-row align-items-center justify-content-center">
-                                <div class="col-1 col-xs-1 justify-content-center d-flex align-items-center border">
+                                <div class="col-1 col-xs-1 justify-content-center d-flex align-items-center">
                                     <a href="#">
                                         <i class="fa-solid fa-house"></i>
                                     </a>
                                 </div>
-                                <div class="col-8 justify-content-start d-flex align-items-center d-none d-md-block border">
+                                <div class="col-8 justify-content-start d-flex align-items-center d-none d-md-block">
                                     <a href="#">
                                         <span>Home</span>
                                     </a>
@@ -72,10 +74,12 @@
                 </div>
             </div>
             <div id="main-content">
-                <div class="container-fluid bg-primary row">
-                    <div class="col-md-4 border">1</div>
-                    <div class="col-md-4 border">2</div>
-                    <div class="col-md-4 border">3</div>
+                <div class="container-fluid bg-primary">
+                    <div class="d-flex flex-lg-row-reverse">
+                        <div class="col-lg-4 col-12 border">1</div>
+                        <div class="col-lg-4 col-12 border">2</div>
+                        <div class="col-lg-4 col-12 border">3</div>
+                    </div>
                 </div>
                 <div class="container-fluid">
                     <section id="dashboard" class="row">
@@ -86,8 +90,58 @@
                                         <div class="card-header">
                                             <h3>Prossime classi</h3>
                                         </div>
-                                        <div class="card-body">
-                                            <div class="row border-bottom d-flex align-items-center">
+                                        <div class="card-body overflow-auto">
+                                            <table class="table">
+                                                <thead>
+                                                  <tr>
+                                                    <th scope="col">Nome</th>
+                                                    <th scope="col" class="d-none d-sm-table-cell">Data inizio</th>
+                                                    <th scope="col" class="d-none d-sm-table-cell">ROI</th>
+                                                    <th scope="col">Stato</th>
+                                                    <th scope="col">Azioni</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr >
+                                                    <td scope="row" class="d-flex">
+                                                        <div class="class-avatar-container me-1">
+                                                            <img src="img/class-avatar.jpg" alt="">
+                                                        </div>
+                                                        <div>
+                                                            Classe 75
+                                                        </div>
+                                                    </td>
+                                                    <td class="d-none d-sm-table-cell">15 Febbraio 2021</td>
+                                                    <td class="d-none d-sm-table-cell">20%</td>
+                                                    <td>
+                                                        <div class="btn btn-green my-1 py-1 px-2 text-white">Done</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn btn-azioni my-2 py-1 px-2 border">
+                                                            <i class="fa-solid fa-pencil"></i>
+                                                        </div>
+                                                        <div class="btn btn-azioni my-2 py-1 px-2 border">
+                                                            <i class="fa-solid fa-x"></i>
+                                                        </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td scope="row">2</td>
+                                                    <td class="d-none d-sm-table-cell">Jacob</td>
+                                                    <td class="d-none d-sm-table-cell">Jacob</td>
+                                                    <td>Thornton</td>
+                                                    <td>@fat</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">3</th>
+                                                    <td class="d-none d-sm-table-cell">Thornton</td>
+                                                    <td class="d-none d-sm-table-cell">Thornton</td>
+                                                    <td>Thornton</td>
+                                                    <td>@twitter</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            <!-- <div class="row border-bottom d-flex align-items-center">
                                                 <div class="col-5 col-sm-3 col-lg-6">
                                                     Nome
                                                 </div>
@@ -96,7 +150,7 @@
                                                 <div class="col-3 col-sm-2 col-lg-1 d-flex align-items-center justify-content-center">Stato</div>
                                                 <div class="col-4 col-sm-2 col-lg-2 d-flex align-items-center justify-content-center">Azioni</div>
                                             </div>
-                                            <div class="row border-bottom">
+                                            <div class="row border-bottom d-flex align-items-center">
                                                 <div class="col-5 col-sm-3 col-lg-6 d-flex align-items-center">
                                                     <div class="class-avatar-container me-3">
                                                         <img src="img/class-avatar.jpg" alt="">
@@ -118,7 +172,7 @@
                                                         <i class="fa-solid fa-x"></i>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -128,28 +182,125 @@
                                             <h3>F.A.Q.</h3>
                                         </div>
                                         <div class="card-body">
-                                            a
+                                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                <div class="accordion-item">
+                                                  <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                      Come aggiungere un nuovo studente?
+                                                    </button>
+                                                  </h2>
+                                                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi accusantium, accusamus cupiditate quisquam quae sunt rerum voluptatum numquam nostrum expedita fuga culpa aliquid, laudantium quaerat impedit veritatis unde natus ab delectus, ex facere magni eum distinctio voluptatem. Labore molestias sequi, dicta amet aperiam eligendi error doloribus atque! Quia alias blanditiis totam, mollitia velit facilis amet at vel illo eius nemo quasi cum, laborum sint? Alias a corporis nulla harum deleniti libero dolor, dolorem illum molestias error doloribus possimus optio esse! Et voluptatem adipisci magni odio porro consectetur omnis rem numquam, ut, tempore similique earum quo quis neque tenetur repudiandae nam!</div>
+                                                  </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                  <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                      Come posso accedere alle informazioni del mio account?
+                                                    </button>
+                                                  </h2>
+                                                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque minima totam aliquam, quibusdam in soluta tempora porro at. Architecto nisi unde illum mollitia culpa similique!</div>
+                                                  </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                  <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                      Posso usare questa dashboard da mobile?
+                                                    </button>
+                                                  </h2>
+                                                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque eius alias id, deleniti recusandae quae corrupti magnam praesentium molestias tempore fugit doloremque dignissimos non laudantium ipsam nam quisquam quod. Sequi delectus veritatis quod placeat modi mollitia dolorum repudiandae, nam aut beatae sunt assumenda quas velit molestias, earum tempore debitis omnis?</div>
+                                                  </div>
+                                                </div>
+                                              </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-lg-4 border">
-                            
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>F.A.Q.</h3>
-                                </div>
-                                <div class="card-body">
-                                    a
+                            <div class="row border gy-5 py-3">
+                                <div class="col-12 border">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3>Todo</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-group ul-todo">
+                                                <li class="list-group-item">
+                                                    <div class="input-group border-0 d-flex align-items-center">
+                                                        <div class="input-group-text border-0 bg-body">
+                                                          <input class="form-check-input mt-0" type="checkbox" value="check" aria-label="Checkbox for following text input">
+                                                        </div>
+                                                        <div>
+                                                            Kickoff nuove classi
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="input-group border-0 d-flex align-items-center">
+                                                        <div class="input-group-text border-0 bg-body">
+                                                          <input class="form-check-input mt-0" type="checkbox" value="check" aria-label="Checkbox for following text input">
+                                                        </div>
+                                                        <div>
+                                                            Lezione su Boostrap 5 in classe #107
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="input-group border-0 d-flex align-items-center">
+                                                        <div class="input-group-text border-0 bg-body">
+                                                          <input class="form-check-input mt-0" type="checkbox" value="check" aria-label="Checkbox for following text input">
+                                                        </div>
+                                                        <div>
+                                                            Controllare username github studenti
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                            <!-- <div class="input-group mb-3 bg-body-tertiary border rounded-1">
+                                                <div class="input-group-text border-0">
+                                                  <input class="form-check-input mt-0" type="checkbox" value="check" aria-label="Checkbox for following text input">
+                                                </div>
+                                                <div>
+                                                    Kickoff nuove classi
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>F.A.Q.</h3>
-                                </div>
-                                <div class="card-body">
-                                    a
+                            <div class="row border gy-5 py-3">
+                                <div class="col-12 border">
+                                    <div class="card">
+                                        
+                                        <div class="card-body">
+                                            <ul class="list-group ul-todo">
+                                                <li class="list-group-item">
+                                                    <div class="card-img">
+                                                        <img src="img/stats.jpeg" alt="stats-img">
+                                                    </div>
+                                                    <div class="card-text">
+                                                        <h6>Utenti attivi</h6>
+                                                        <div>Lista degli utenti attivi in piattaforma nell'ultimo mese</div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    Gennaio: 1200
+                                                </li>
+                                                <li class="list-group-item">
+                                                    Febbraio: 800
+                                                </li>
+                                                <li class="list-group-item">
+                                                    Marzo: 1500
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="link-primary link underline">Visalizza report approfondito</a>
+                                                </li>
+                                              </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
